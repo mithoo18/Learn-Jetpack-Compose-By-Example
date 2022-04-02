@@ -301,24 +301,71 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    // Center ->Horizontally
+    // Center ->Vertically
+
+    //We can also Use fillMaxSize -> fillMaxWidth X fillMaxHeight
+    // 1 ka nicha 1
     @Composable
     fun Disp22(){
-        Column {
-            modifier
+        Column (
+            modifier = Modifier
+                .fillMaxWidth()
+                .fillMaxHeight()
+                .background(color = Color.LightGray),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally)
+        {
+        Text("Hello ", fontSize = 30.sp)
+        Text("Jetpack", fontSize = 30.sp)
+        Text("Me", fontSize = 30.sp)
+        Text("Who", fontSize = 30.sp)
 
         }
-
-
     }
 
+    //fillMaxSize(0.5f) This will set fraction of total Size
     @Composable
     fun Disp23(){
+        Column(
+            modifier = Modifier
+                .fillMaxSize(0.5f)
+                .background(Color.LightGray),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally,
+            ){
+            Text("Hello ", fontSize = 30.sp)
+            Text("Jetpack ", fontSize = 30.sp)
+            Text("Kotlin ",fontSize = 30.sp)
+        }
+    }
+
+    @Composable
+    fun Disp24(){
+
 
     }
 
     @Composable
-    fun Disp
+    fun Disp25(){
 
+    }
+
+    @Composable
+    fun Disp26(){
+
+    }
+
+    @Composable
+    fun Disop27()
+    {
+
+    }
+
+    @Composable
+    fun Disp28(){
+
+    }
 
 }
 
