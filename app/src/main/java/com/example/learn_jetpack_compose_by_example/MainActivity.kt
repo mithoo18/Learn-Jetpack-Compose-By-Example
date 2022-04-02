@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.width
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -12,6 +13,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.learn_jetpack_compose_by_example.ui.theme.MyFontFamily
 
@@ -27,6 +30,9 @@ class MainActivity : ComponentActivity() {
         //Disp5()
         //Disp6()
         //Disp7()
+        //Disp8()
+        //Disp9()
+        //Disp10()
         }
     }
 
@@ -128,6 +134,22 @@ class MainActivity : ComponentActivity() {
 
     }
 
+    //Modifier (Width) -> Change TextField Size
+    @Composable
+    fun Disp10(){
+        Text(
+            text = "Hello Me",
+            fontSize = 30.sp,
+            color =  Color.Green,
+            fontStyle = FontStyle.Italic,
+            fontWeight = FontWeight.ExtraBold,
+            fontFamily = MyFontFamily,
+            textAlign = TextAlign.Center,
+            modifier = Modifier
+                .background(Color.Yellow)
+                .width(410.dp)
+        )
+    }
 
 
 
