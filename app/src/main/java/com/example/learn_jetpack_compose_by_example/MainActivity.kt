@@ -4,8 +4,8 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.text.selection.DisableSelection
 import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -182,6 +182,81 @@ class MainActivity : ComponentActivity() {
             Text("Hello I am Devanshu How Are You", fontSize = 30.sp)
         }
     }
+
+    //Selection _ NonSelection
+    @Composable
+    fun Disp15(){
+        Column{
+            SelectionContainer {
+                Text("This Is Selectable Text", fontSize = 30.sp)
+            }
+            Text("This Is Not Selectable Text",fontSize = 30.sp)
+        }
+
+    }
+
+    //Selection,NonSelection,Disable_Selection
+    @Composable
+    fun Disp16(){
+     Column {
+         SelectionContainer {
+             Text("This Is Selectable Text",fontSize = 30.sp)
+
+             DisableSelection {
+                 Text("This Is Not Selectable", fontSize = 30.sp)
+             }
+         }
+         Text("This Is Non Selectable",fontSize = 30.sp)
+     }
+
+    }
+
+    //Left to Right || Row Wise -> 1 | 2 | 3
+    @Composable
+    fun Disp17(){
+        Row{
+            Text("Devanshu", fontSize = 30.sp)
+            Text("Ishika", fontSize = 30.sp)
+            Text("Mits", fontSize = 30.sp)
+        }
+    }
+
+
+    //Center TextBox
+    @Composable
+    fun Disp18(){
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(Color.LightGray)
+        )
+        {
+            Text("Devanshu", fontSize = 30.sp)
+            Text("Mits",fontSize = 30.sp)
+            Text("Demo",fontSize = 30.sp)
+        }
+
+    }
+
+    //Center with modifier Right_Left
+    @Composable
+    fun Dis19(){
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(color = Color.LightGray),
+            horizontalArrangement = Arrangement.Center
+        ){
+            Text("Hello ", fontSize = 30.sp)
+            Text("Jetpack ",fontSize = 30.sp)
+            Text("Kotlin ",fontSize = 30.sp)
+        }
+
+    }
+
+
+
+
 
 
 
