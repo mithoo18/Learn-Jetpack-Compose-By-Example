@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.selection.DisableSelection
 import androidx.compose.foundation.text.selection.SelectionContainer
@@ -41,6 +42,23 @@ class MainActivity : ComponentActivity() {
         //Disp12()
         //Disp13()
         //Disp14()
+        //Disp15()
+        //Disp16()
+        //Disp17()
+        //Disp18()
+        //Disp19()
+        //Disp20()
+        //Disp21()
+        //Disp22()
+        //Disp23()
+        //Disp24()
+        //Disp25()
+        //Disp26()
+        //Disp27()
+        //Disp28()
+        //Disp29()
+        //Disp30()
+
         }
     }
 
@@ -243,7 +261,7 @@ class MainActivity : ComponentActivity() {
 
     //Center with modifier Right_Left
     @Composable
-    fun Dis19(){
+    fun Disp19(){
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -259,7 +277,7 @@ class MainActivity : ComponentActivity() {
 
     //Center horizontally, Vertically
     @Composable
-    fun Dis20(){
+    fun Disp20(){
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -406,19 +424,87 @@ class MainActivity : ComponentActivity() {
     //Lazy -> To Decrease Loading Time
     @Composable
     fun Disp26(){
+        LazyRow(
+            modifier = Modifier
+                .background(color = Color.LightGray)
+                .fillMaxHeight(),
+             verticalAlignment = Alignment.CenterVertically)
+        {
+            item { Text("First Item", fontSize = 30.sp) }
+            items(50){ i-> Text(" Item $i", fontSize = 30.sp)}
+            item{ Text("Last Item", fontSize = 30.sp) }
+        }
+    }
+
+    //Lazy + Padding
+    @Composable
+    fun Disp27()
+    {
+        LazyRow(
+            modifier = Modifier
+                .background(color = Color.LightGray)
+                .fillMaxHeight(),
+            verticalAlignment = Alignment.CenterVertically,
+            contentPadding = PaddingValues(horizontal = 100.dp, vertical = 10.dp)
+        ){
+
+            item { Text("First Item", fontSize = 30.sp) }
+            items(50){i-> Text(" Item $i", fontSize = 30.sp)}
+            item{ Text("Last Item", fontSize = 30.sp) }
+        }
 
     }
 
+    //Lazy + Padding + Horizontal Space
     @Composable
-    fun Disop27()
+    fun Disp28(){
+        LazyRow(
+            modifier = Modifier
+                .background(Color.LightGray)
+                .fillMaxHeight(),
+
+            verticalAlignment = Alignment.CenterVertically,
+            contentPadding = PaddingValues(horizontal = 100.dp, vertical = 10.dp),
+            horizontalArrangement = Arrangement.spacedBy(50.dp)
+        ){
+
+        }
+    }
+
+    @Composable
+    fun Disp29()
     {
 
     }
 
     @Composable
-    fun Disp28(){
+    fun Disp30(){
 
     }
 
+    @Composable
+    fun Disp31(){
+
+    }
+
+    @Composable
+    fun Disp32(){
+
+    }
+
+    @Composable
+    fun Disp33(){
+
+    }
+
+    @Composable
+    fun Disp34(){
+
+    }
+
+    @Composable
+    fun Disp35(){
+
+    }
 }
 
