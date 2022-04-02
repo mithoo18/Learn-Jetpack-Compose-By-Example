@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -33,6 +34,10 @@ class MainActivity : ComponentActivity() {
         //Disp8()
         //Disp9()
         //Disp10()
+        //Disp11()
+        //Disp12()
+        //Disp13()
+        //Disp14()
         }
     }
 
@@ -151,6 +156,32 @@ class MainActivity : ComponentActivity() {
         )
     }
 
+    //For Long Text (repeat to repeat in same line)
+    @Composable
+    fun Disp11(){
+        Text("Jetpack".repeat(10), fontSize = 30.sp)
+    }
+
+    //Max 2 line if extra then not show extra the 2 lines
+    @Composable
+    fun Disp12(){
+        Text("Jetpack".repeat(10), fontSize = 30.sp, maxLines = 2)
+    }
+
+
+    //You can also add space
+    @Composable
+    fun Disp13(){
+        Text("Jetpack _ _".repeat(10), fontSize = 30.sp, maxLines = 2)
+    }
+
+    //Selection Of Text
+    @Composable
+    fun Disp14(){
+        SelectionContainer {
+            Text("Hello I am Devanshu How Are You", fontSize = 30.sp)
+        }
+    }
 
 
 
