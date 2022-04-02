@@ -9,6 +9,7 @@ import androidx.compose.foundation.text.selection.DisableSelection
 import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontFamily
@@ -254,11 +255,69 @@ class MainActivity : ComponentActivity() {
 
     }
 
+    //Center horizontally, Vertically
+    @Composable
+    fun Dis20(){
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .fillMaxHeight()
+                .background(color = Color.LightGray),
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically
+        ){
+            Text("Hello ", fontSize = 30.sp)
+            Text("Jetpack ",fontSize= 30.sp)
+            Text("Kotlin ", fontSize = 30.sp)
+        }
+    }
+
+    //Scrollable
+    @Composable
+    fun Disp21(){
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .fillMaxHeight()
+                .background(color = Color.LightGray),
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically
+        ){
+            Text("Hello 1", fontSize = 30.sp)
+            Text("Hello 2", fontSize = 30.sp)
+            Text("First", fontSize = 30.sp)
+            Text("First", fontSize = 30.sp)
+            Text("First", fontSize = 30.sp)
+            Text("First", fontSize = 30.sp)
+            Text("First", fontSize = 30.sp)
+            Text("First", fontSize = 30.sp)
+            Text("First", fontSize = 30.sp)
+            Text("First", fontSize = 30.sp)
+            Text("First", fontSize = 30.sp)
+            Text("First", fontSize = 30.sp)
+            Text("First", fontSize = 30.sp)
+            Text("First", fontSize = 30.sp)
+            Text("Hello Last", fontSize = 30.sp)
+        }
+    }
+
+    @Composable
+    fun Disp22(){
+        Column {
+            modifier
+
+        }
 
 
+    }
 
+    @Composable
+    fun Disp23(){
 
+    }
 
+    @Composable
+    fun Disp
 
 
 }
