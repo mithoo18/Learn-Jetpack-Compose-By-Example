@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.selection.DisableSelection
@@ -474,7 +475,18 @@ class MainActivity : ComponentActivity() {
     @Composable
     fun Disp29()
     {
-
+        LazyColumn (
+        modifier = Modifier
+            .background(Color.LightGray)
+            .fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        contentPadding = PaddingValues(10.dp,100.dp),
+        verticalArrangement = Arrangement.spacedBy(50.dp)
+        ){
+            item{ Text("First Item", fontSize = 30.sp) }
+            items(50){ i-> Text(" Items $i", fontSize = 30.sp)}
+            item{ Text("Last Item", fontSize = 30.sp)}
+        }
     }
 
     @Composable
