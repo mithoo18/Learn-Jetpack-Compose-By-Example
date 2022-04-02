@@ -3,13 +3,17 @@ package com.example.learn_jetpack_compose_by_example
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.example.learn_jetpack_compose_by_example.ui.theme.MyFontFamily
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -83,6 +87,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    //Properties Of Text
     @Composable
     fun Disp7(){
         Text(
@@ -94,6 +99,36 @@ class MainActivity : ComponentActivity() {
         )
 
     }
+
+
+    //Properties + CustomFont
+    fun Disp8(){
+        Text(
+            "Hello Dev",
+            fontSize = 30.sp,
+            color = Color.Red,
+            fontStyle = FontStyle.Italic,
+            fontWeight = FontWeight.ExtraBold,
+            fontFamily = MyFontFamily
+        )
+    }
+
+    //Modifier (Background) -> Change Color So to align
+    fun Disp9(){
+        Text(
+            "Hello Devanshu",
+            fontSize = 30.sp,
+            color = Color.Green,
+            fontStyle = FontStyle.Italic,
+            fontFamily = MyFontFamily,
+
+            modifier = Modifier.background(color = Color.Yellow)
+
+        )
+
+    }
+
+
 
 
 
