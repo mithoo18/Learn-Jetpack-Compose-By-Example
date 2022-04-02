@@ -5,8 +5,10 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.selection.DisableSelection
 import androidx.compose.foundation.text.selection.SelectionContainer
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -340,17 +342,68 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    //For Vertical Scrolling
     @Composable
     fun Disp24(){
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(Color.LightGray)
+                .verticalScroll(rememberScrollState()),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally,
+        ){
+        Text("Hello 1", fontSize = 30.sp)
+        Text("Hello 2", fontSize = 30.sp)
+        Text("Hello 3", fontSize = 30.sp)
+        Text("Hello 4",fontSize = 30.sp)
+        Text("hello 5", fontSize = 30.sp)
+        Text("Hello 1", fontSize = 30.sp)
+        Text("Hello 2", fontSize = 30.sp)
+        Text("Hello 3", fontSize = 30.sp)
+        Text("Hello 4",fontSize = 30.sp)
+        Text("hello 5", fontSize = 30.sp)
+        Text("Hello 1", fontSize = 30.sp)
+        Text("Hello 2", fontSize = 30.sp)
+        Text("Hello 3", fontSize = 30.sp)
+        Text("Hello 4",fontSize = 30.sp)
+        Text("hello 5", fontSize = 30.sp)
+        Text("Hello 1", fontSize = 30.sp)
+        Text("Hello 2", fontSize = 30.sp)
+        Text("Hello 3", fontSize = 30.sp)
+        Text("Hello 4",fontSize = 30.sp)
+        Text("hello 5", fontSize = 30.sp)
+        Text("Hello 1", fontSize = 30.sp)
+        Text("Hello 2", fontSize = 30.sp)
+        Text("Hello 3", fontSize = 30.sp)
+        Text("Hello 4",fontSize = 30.sp)
+        Text("hello 5", fontSize = 30.sp)
 
+        }
 
     }
 
+    //Vertical Scrolling with Loop
     @Composable
     fun Disp25(){
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(Color.LightGray)
+                .verticalScroll(rememberScrollState()),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally,
+        ){
+            Text("First", fontSize = 30.sp)
+            for (i in 0..50){
+            Text("Item $i", fontSize = 30.sp)
+            }
+            Text("Last", fontSize = 30.sp)
 
+        }
     }
 
+    //Lazy -> To Decrease Loading Time
     @Composable
     fun Disp26(){
 
