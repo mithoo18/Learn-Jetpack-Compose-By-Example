@@ -1,6 +1,7 @@
 package com.example.learn_jetpack_compose_by_example
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
@@ -11,7 +12,9 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.selection.DisableSelection
 import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.Text
+import androidx.compose.material.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -537,12 +540,42 @@ class MainActivity : ComponentActivity() {
 
     @Composable
     fun Disp32(){
-
+        Scaffold(
+        topBar = {
+                TopAppBar(
+                    title = {
+                        Text("Material App")
+                    }, actions = {
+                        IconButton(onClick = {
+                            Log.d("Button Clicked","Search Button Clicked")
+                        }){
+                            Icon(Icons.Filled.Search, contentDescription = null)
+                        }
+                    }
+                )
+            }
+        ){}
     }
 
     @Composable
     fun Disp33(){
-
+        Scaffold(
+            topBar = {
+                TopAppBar(
+                    title = {
+                        Text("Material App Exp")
+                    }, actions = {
+                        IconButton(onClick = {
+                            Log.d("Button Clicked","Search Button On")
+                        }){
+                            Icon(Icons.Filled.Search, contentDescription = null)
+                        }
+                    }
+                )
+            }
+        ){
+            Disp32()
+        }
     }
 
     @Composable
