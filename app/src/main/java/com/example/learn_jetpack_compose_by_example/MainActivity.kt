@@ -4,27 +4,30 @@ import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.background
+import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.text.selection.DisableSelection
 import androidx.compose.foundation.text.selection.SelectionContainer
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import coil.compose.rememberImagePainter
 import com.example.learn_jetpack_compose_by_example.ui.theme.MyFontFamily
 
 class MainActivity : ComponentActivity() {
@@ -62,6 +65,23 @@ class MainActivity : ComponentActivity() {
         //Disp28()
         //Disp29()
         //Disp30()
+        //Disp31()
+        //Disp32()
+        //Disp33()
+        //Disp34()
+        //Disp35()
+        //Disp36()
+        //Disp37()
+        //Disp37()
+        //Disp38()
+        //Disp39()
+        //Disp40()
+        //Disp41()
+        //Disp42()
+        //Disp43()
+        //Disp44()
+        //Disp45()
+
 
         }
     }
@@ -580,12 +600,98 @@ class MainActivity : ComponentActivity() {
 
     @Composable
     fun Disp34(){
-
+        Image(
+            painter = painterResource(id = R.drawable.ic_launcher_background),
+            contentDescription = "Profile Images 1"
+        )
     }
 
     @Composable
     fun Disp35(){
+        Image(
+            painter = painterResource(id = R.drawable.ic_launcher_foreground),
+            contentDescription = "Profile Images 2",
+            modifier = Modifier
+                .border(5.5.dp, color = Color.Red)
+                .size(300.dp)
+        )
+    }
+
+    @Composable
+    fun Disp36(){
+        Image(
+            painter = painterResource(id = R.drawable.ic_launcher_foreground),
+            contentDescription = "Profile Image 3",
+            contentScale = ContentScale.Crop,
+            modifier = Modifier
+                .border(5.5.dp,Color.Red, CircleShape)
+                .size(300.dp)
+                .clip(shape = CircleShape)
+        )
+    }
+
+    //Image Loading From Internet
+    @Composable
+    fun Disp37(){
+        Image(
+            painter = rememberImagePainter
+            (
+                data = "https://picsum.photos/200"
+            ),
+            contentDescription = "Profile Image 4",
+            contentScale = ContentScale.Crop,
+            modifier = Modifier
+                .border(5.5.dp,Color.Red, CircleShape)
+                .size(300.dp)
+                .clip(shape = CircleShape)
+        )
+    }
+
+    //High Image
+    @Composable
+    fun Disp38(){
 
     }
+
+    @Composable
+    fun Disp39(){
+
+    }
+
+    @Composable
+    fun Disp40(){
+
+    }
+
+    @Composable
+    fun Disp49(){
+
+    }
+
+    @Composable
+    fun Dis50(){
+
+    }
+
+    @Composable
+    fun Disp51(){
+
+    }
+
+    @Composable
+    fun Disp52(){
+
+    }
+
+    @Composable
+    fun Disp53(){
+
+    }
+
+    @Composable
+    fun Disp54(){
+
+    }
+
 }
 
