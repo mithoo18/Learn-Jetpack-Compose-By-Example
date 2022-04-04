@@ -9,10 +9,12 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.selection.DisableSelection
 import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -647,20 +649,60 @@ class MainActivity : ComponentActivity() {
         )
     }
 
-    //High Image
+    //High Image From Assets
     @Composable
     fun Disp38(){
+        Icon(
+            Icons.Filled.Menu,
+            contentDescription = "Menu",
+            modifier = Modifier.size(40.dp),
+            tint = Color.Red
+        )
 
     }
 
+    //Card + Border
     @Composable
     fun Disp39(){
-
+        Card(
+            shape = RoundedCornerShape(10.dp),
+            backgroundColor = Color.Gray,
+            border = BorderStroke(5.dp,Color.Red),
+            contentColor = Color.White,
+        ){
+            Column(modifier = Modifier.padding(40.dp)){
+                Text(
+                    text = "This Is Card",
+                    fontSize = 30.sp,
+                    textAlign = TextAlign.Center,
+                )
+            }
+        }
     }
 
+    //Card + Bac
     @Composable
     fun Disp40(){
-
+        Card(
+            shape = RoundedCornerShape(10.dp),
+            backgroundColor = Color.Gray,
+            border = BorderStroke(5.dp,Color.Red),
+            contentColor = Color.White,
+        ){
+            Column(modifier = Modifier.padding(40.dp)){
+                Text(
+                    text = "This Is a Card",
+                    fontSize = 30.sp,
+                    textAlign = TextAlign.Center,
+                )
+                Spacer(modifier = Modifier.height(100.dp))
+                Text(
+                    text = "Jetpack",
+                    fontSize = 30.sp,
+                    textAlign = TextAlign.Center,
+                )
+            }
+        }
     }
 
     @Composable
