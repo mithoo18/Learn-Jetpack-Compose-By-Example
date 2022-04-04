@@ -489,14 +489,50 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    //Box -> Square, Take a part from Parent
     @Composable
     fun Disp30(){
+        Box(
+            modifier = Modifier
+                .fillMaxWidth(0.5f)
+                .fillMaxHeight(0.5f)
+                .background(color = Color.Yellow)
+        )
+        {
+            Text("This Is Outer Box")
+            Box(
+                modifier = Modifier
+                    .fillMaxHeight(0.5f)
+                    .fillMaxWidth(0.5f)
+                    .background(color = Color.Blue)
+            ){
+                    Text("This Is Inner Box")
+            }
+        }
 
     }
 
     @Composable
     fun Disp31(){
-
+        Box(
+            modifier = Modifier
+                .fillMaxHeight(0.5f)
+                .fillMaxWidth(0.5f)
+                .background(color = Color.Blue)
+        ){
+            Text("This Is Outer Box",
+            modifier = Modifier.align(Alignment.Center))
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth(0.5f)
+                    .fillMaxHeight(0.5f)
+                    .background(color = Color.Yellow)
+            ){
+                Text("This is Inner Box",
+                color = Color.Red,
+                modifier = Modifier.align(Alignment.Center))
+            }
+        }
     }
 
     @Composable
