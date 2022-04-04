@@ -705,6 +705,8 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    /* STATEFULL COMPONENT */
+
     @Composable
     fun Disp49(){
 
