@@ -38,7 +38,6 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import com.example.learn_jetpack_compose_by_example.ui.theme.MyFontFamily
-
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -91,7 +90,17 @@ class MainActivity : ComponentActivity() {
         //Disp44()
         //Disp45()
         //Disp49()
-            Disp52()
+        //Disp52()
+        //Disp53()
+        //Disp54()
+        //Disp55()
+        //Disp56()
+        //Disp57()
+        //Disp58()
+        //Disp59()
+        //Disp60()
+        //Disp61()
+        //Disp62()
         }
     }
 
@@ -761,15 +770,94 @@ class MainActivity : ComponentActivity() {
 
     }
 
+    //Text Button + Normal Button
     @Composable
     fun Disp53(){
+        Button(
+            onClick = {Log.d("Button","Button Clicked")},
+            modifier = Modifier.padding(30.dp),
+            contentPadding = PaddingValues(start = 40.dp,top =  20.dp,end = 40.dp,bottom = 20.dp),
+            colors = ButtonDefaults.buttonColors(backgroundColor = Color.Yellow),
+            shape = CircleShape,
+            border = BorderStroke(1.dp, Color.Blue)
+        ){
+            Text("Button", fontSize = 24.sp)
+        }
+
+        TextButton(
+            onClick = {Log.d("Text Button","Text Button Clicked")},
+            modifier = Modifier.padding(30.dp),
+            colors = ButtonDefaults.outlinedButtonColors(backgroundColor = Color.Red)
+        ){
+            Text("Button", fontSize = 24.sp)
+        }
+
+    }
+
+    //Normal Button + OutlineButton
+    @Composable
+    fun Disp54(){
+        Button(
+            onClick = {Log.d("Button","ButtonClicked")},
+            modifier = Modifier.padding(30.dp),
+            contentPadding = PaddingValues(start = 40.dp,top =  20.dp,end = 40.dp,bottom = 20.dp),
+            colors = ButtonDefaults.buttonColors(backgroundColor = Color.Blue),
+            shape = CircleShape,
+            border = BorderStroke(1.dp,Color.Yellow)
+        ){
+            Text("Button", fontSize = 24.sp)
+        }
+
+        OutlinedButton(
+            onClick = {Log.d("OutineButton","Outline Button Clicked")},
+            modifier = Modifier.padding(30.dp),
+            colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.Blue),
+            border = BorderStroke(1.dp,Color.Blue),
+            shape = CircleShape,
+            contentPadding = PaddingValues(start = 40.dp,top =  20.dp,end = 40.dp,bottom = 20.dp)
+        ){
+            Text("Button Outlined", fontSize = 24.sp)
+        }
+    }
+
+    @Composable
+    fun Disp55(){
 
     }
 
     @Composable
-    fun Disp54(){
+    fun Disp56(){
+
+    }
+
+    @Composable
+    fun Disp57(){
+
+    }
+
+    @Composable
+    fun Disp58(){
+
+    }
+
+    @Composable
+    fun Disp59(){
+
+    }
+
+    @Composable
+    fun Disp60(){
+
+    }
+
+    @Composable
+    fun Disp61(){
+
+    }
+
+    @Composable
+    fun Disp62(){
 
     }
 
 }
-
