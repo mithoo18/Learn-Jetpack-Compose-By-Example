@@ -14,6 +14,7 @@ import androidx.compose.foundation.text.selection.DisableSelection
 import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.runtime.Composable
@@ -820,13 +821,50 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    //NormalButton + IconButton
     @Composable
     fun Disp55(){
 
+        Button(
+            onClick = {Log.d("Normal_Button","Normal Button Clicked")},
+            modifier = Modifier.padding(30.dp),
+            contentPadding = PaddingValues(start = 40.dp,top = 20.dp,end = 40.dp,bottom = 20.dp),
+            colors = ButtonDefaults.buttonColors(backgroundColor = Color.Blue),
+            shape = CircleShape,
+            border = BorderStroke(1.dp,Color.Yellow)
+        ){
+            Text("Button", fontSize = 24.sp)
+        }
+
+        IconButton(
+            onClick = {Log.d("Icon Button","Icon Button Clicked")},
+            modifier = Modifier
+                .padding(30.dp)
+                .then(Modifier.size(50.dp))
+                .border(1.dp,Color.Red, shape = CircleShape)
+        ){
+            Icon(Icons.Default.Add, contentDescription = "Icon Button", tint = Color.Blue)
+        }
     }
 
     @Composable
     fun Disp56(){
+        Button(
+            onClick = {Log.d("Normal_Button","Normal Button Clicked")},
+            modifier = Modifier.padding(30.dp),
+            contentPadding = PaddingValues(start = 40.dp,top = 20.dp,end = 40.dp,bottom = 20.dp),
+            colors = ButtonDefaults.buttonColors(backgroundColor = Color.Blue),
+            shape = CircleShape,
+            border = BorderStroke(1.dp,Color.Yellow)
+        ){
+            Text("Button", fontSize = 24.sp)
+        }
+
+        FloatingActionButton(
+            onClick = {Log.d("Floating Button","Floating Button Clicked")}
+
+        )
+
 
     }
 
