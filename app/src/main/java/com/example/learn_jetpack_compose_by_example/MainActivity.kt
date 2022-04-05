@@ -17,6 +17,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -30,6 +32,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.rememberImagePainter
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.input.PasswordVisualTransformation
 import com.example.learn_jetpack_compose_by_example.ui.theme.MyFontFamily
 
 class MainActivity : ComponentActivity() {
@@ -83,8 +90,8 @@ class MainActivity : ComponentActivity() {
         //Disp43()
         //Disp44()
         //Disp45()
-
-
+        //Disp49()
+            Disp52()
         }
     }
 
@@ -160,6 +167,7 @@ class MainActivity : ComponentActivity() {
 
 
     //Properties + CustomFont
+    @Composable
     fun Disp8(){
         Text(
             "Hello Dev",
@@ -172,6 +180,7 @@ class MainActivity : ComponentActivity() {
     }
 
     //Modifier (Background) -> Change Color So to align
+    @Composable
     fun Disp9(){
         Text(
             "Hello Devanshu",
@@ -709,21 +718,46 @@ class MainActivity : ComponentActivity() {
 
     @Composable
     fun Disp49(){
-
+        var name : String by remember { mutableStateOf("") }
+        Column {
+            OutlinedTextField(value = "Devanshu", onValueChange = {
+                name = it
+            })
+            Text(text = name, fontSize = 30.sp)
+        }
     }
 
-    @Composable
+    //State Hostinng
+
+/*    @Composable
     fun Dis50(){
-
-    }
+        var name : String by remember { mutableListOf("") }
+        HelloContent(name = name,onNameChange ={name = it})
+    }*/
 
     @Composable
-    fun Disp51(){
+    fun Disp51(name : String,OnNameChange :(String) -> Unit){
+        Column {
+            OutlinedTextField(value = name, onValueChange = OnNameChange)
+            Text(text = name, fontSize = 30.sp)
+        }
 
     }
 
+    //Custom Button
     @Composable
     fun Disp52(){
+        Column {
+            Button(
+                onClick = {Log.d("Button","Button Clicked")},
+                modifier = Modifier.padding(30.dp),
+                contentPadding = PaddingValues(start = 40.dp,top = 20.dp,end = 40.dp, bottom = 20.dp),
+                colors = ButtonDefaults.buttonColors(backgroundColor = Color.Yellow),
+                shape = CircleShape,
+            ){
+                Text(text = "Button", fontSize = 24.sp)
+            }
+        }
 
     }
 
