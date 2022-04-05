@@ -16,6 +16,7 @@ import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
@@ -861,16 +862,48 @@ class MainActivity : ComponentActivity() {
         }
 
         FloatingActionButton(
-            onClick = {Log.d("Floating Button","Floating Button Clicked")}
+            onClick = {Log.d("Floating Button","Floating Button Clicked")},
+            modifier = Modifier.padding(30.dp),
+            backgroundColor = Color.Yellow,
+        ){
+            Icon(
+                Icons.Default.Add,
+                contentDescription = "Floating Action Button"
+            )
 
-        )
-
-
+        }
     }
 
     @Composable
     fun Disp57(){
+        LazyColumn (
+            modifier = Modifier.fillMaxSize(),
+           verticalArrangement = Arrangement.spacedBy(10.dp)
+                ){
+            item{
+                TextField(
+                    value = "Devanshu",
+                    onValueChange = {},
+                    label = {Text(text = "Nmae")},
+                    placeholder = { Text(text = "Write Your Name")},
+                    textStyle = TextStyle(color = Color.Red),
+                    leadingIcon = {
+                        Icon(
+                            imageVector = Icons.Filled.Person,
+                            contentDescription = ""
+                        )
+                    },
+                    shape = RoundedCornerShape(10.dp),
+                    colors = TextFieldDefaults.textFieldColors(
+                        focusedIndicatorColor = Color.Green,
+                        unfocusedIndicatorColor = Color.Transparent
+                    ),
+                    readOnly = true,
+                    singleLine = true,
+                )
 
+            }
+            }
     }
 
     @Composable
